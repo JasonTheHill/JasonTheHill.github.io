@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Post</title>
+    <style>
+      /* applies to all 3 boxes */
+      .box {
+        width: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .rating-box {
+        height: 200px;
+		align-items: center;
+      }
+      .tags-box {
+        height: 580px;
+        overflow-y: scroll;
+		align-items: left;
+      }
+      .review-box {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 10px;
+        overflow-y: scroll;
+		align-items: center;
+      }
+	  
+      /* for getting the boxes in the correct layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+      }
+	  
+      /* the labes: Rating, Tags, Review */
+      .label {
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+	  
+      /* the stars are actually text, using special characters */
+      .stars {
+        font-size: 2.25em;
+        color: gold;
+        margin-top: 10px;
+      }
+	  
+      .tags {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 50;
+      }
+      .list-item {
+        margin-bottom: 5px;
+      }
+      .review {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: justify;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+		<h1>Packaging Reviews</h1>
+		<nav>
+			<a href="index">Home</a> |
+			<a href="search">Search</a> |
+			<a href="createPost">Post New Review</a> |
+			<a href="about">About</a>
+		</nav>
+	</header>
+	
+    <div class="container">
+      <div class="left-container">
+        <div class="box rating-box">
+          <div class="label">Rating</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="box tags-box">
+          <div class="label">Tags</div>
+          <ul class="tags">
+			<li class="list-item">Test Tag</li>
+            <li class="list-item">Tag 1</li>
+            <li class="list-item">Tag 2</li>
+            <li class="list-item">Tag 3</li>
+			<li class="list-item">A very long tag to test if the text wraps to the next line properly</li>
+			<li class="list-item">A</li>
+			<li class="list-item">Whole</li>
+			<li class="list-item">Bunch</li>
+			<li class="list-item">Of</li>
+			<li class="list-item">Tags</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box review-box">
+        <div class="label">Review Name</div>
+        <p class="review">The dog was a loyal companion to his owner. He was always happy to see him when he came home from work and would follow him around the house wherever he went. The dog loved to play fetch and would always bring the ball back to his owner with a wagging tail. He was a great watchdog too, barking at any strangers who came near the house. Overall, the dog was a wonderful pet and brought a lot of joy to his owner's life.</p>
+      </div>
+    </div>
+  </body>
+</html>

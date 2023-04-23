@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post New Review</title>
+    <style>
+      /* applies to all 3 boxes */
+      .box {
+        width: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .rating-box {
+        height: 200px;
+		align-items: center;
+      }
+      .tags-box {
+        height: 580px;
+		align-items: center;
+      }
+      .review-box {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 10px;
+		align-items: center;
+      }
+      /* for getting the boxes in the correct layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+      }
+      /* the labes: Rating, Tags, Review */
+      .label {
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .star-select {
+		margin-top: 20px;
+        display: inline-block;
+      }
+	  
+	  /* applies to all text input boxes EXCEPT TITLE INPUT*/
+      .input {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: justify;
+        padding: 0 20px;
+      }
+	  .review-input {
+	    width: 725px;
+		height: 670px;
+	  }
+	  .tags-input {
+	    width: 325px;
+		height: 450px;
+	  }
+	  .title-input {
+	    font-size: 1em;
+		margin-top: 10px;
+	    width: 500px;
+		height: 70px;
+	  }
+	  
+	  .post-button {
+	    font-size: 2em;
+		font-weight: bold;
+	    width: 150px;
+		height: 75px;
+		margin-left: 135px;
+	  }
+	  
+	  textarea {
+		resize: none;
+	  }
+    </style>
+  </head>
+  <body>
+    <header>
+		<h1>Packaging Reviews</h1>
+		<nav>
+			<a href="index">Home</a> |
+			<a href="search">Search</a> |
+			<a href="createPost">Post New Review</a> |
+			<a href="about">About</a>
+		</nav>
+	</header>
+	
+    <div class="container">
+      <div class="left-container">
+        <div class="box rating-box">
+          <div class="label">Rating</div>
+          <div class="star-select">
+            <input type="radio" name = "selector" value="1"> 1
+            <input type="radio" name = "selector" value="2"> 2
+            <input type="radio" name = "selector" value="3"> 3
+		    <input type="radio" name = "selector" value="4"> 4
+		    <input type="radio" name = "selector" value="5"> 5
+    </div>
+        </div>
+        <div class="box tags-box">
+          <div class="label">Tags</div>
+            <textarea class="input tags-input"></textarea>
+        </div>
+      </div>
+      <div class="box review-box">
+        <div class="label">Title: <textarea class="title-input"></textarea></div>
+        <textarea class="input review-input"></textarea>
+      </div>
+    </div>
+	<button type="submit" class="post-button">Post</button>
+  </body>
+</html>
