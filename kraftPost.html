@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Post</title>
+    <style>
+      /* applies to all 3 boxes */
+      .box {
+        width: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .rating-box {
+        height: 200px;
+		align-items: center;
+      }
+      .tags-box {
+        height: 580px;
+        overflow-y: scroll;
+		align-items: left;
+      }
+      .review-box {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 10px;
+        overflow-y: scroll;
+		align-items: center;
+      }
+	  
+      /* for getting the boxes in the correct layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+      }
+	  
+      /* the labes: Rating, Tags, Review */
+      .label {
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+	  
+      /* the stars are actually text, using special characters */
+      .stars {
+        font-size: 2.25em;
+        color: gold;
+        margin-top: 10px;
+      }
+	  
+      .tags {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 50;
+      }
+      .list-item {
+        margin-bottom: 5px;
+      }
+      .review {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: justify;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+		<h1>Packaging Reviews</h1>
+		<nav>
+			<a href="index">Home</a> |
+			<a href="search">Search</a> |
+			<a href="createPost">Post New Review</a> |
+			<a href="about">About</a>
+		</nav>
+	</header>
+	
+    <div class="container">
+      <div class="left-container">
+        <div class="box rating-box">
+          <div class="label">Rating</div>
+          <div class="stars">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+        </div>
+        <div class="box tags-box">
+          <div class="label">Tags</div>
+          <ul class="tags">
+			<li class="list-item"><a href="Kraft-tag">Kraft</a></li>
+            <li class="list-item"><a href="Cardboard-tag">Cardboard</a></li>
+            <li class="list-item"><a href="Food-Container-tag">Food Container</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box review-box">
+        <div class="label">Kraft could have been Crafted better</div>
+        <p class="review">This review is about those Kraft Mac and Cheese cardboard boxes that you can get at the store for a dollar each. While I think the product itself is both cheap and tasty, I find myself always frustrated when I try to get TO the mac. In fact, these boxes were a huge inspiration for this entire website's existence. The cardboard box that the mac and cheese is packaged in seems to be adequately thick in order to prevent the noodles from spilling out, but there are still some MAJOR issues. Kraft included punctures on the upper outside corner of the box in a half-circle. You might think that this is meant to be a cutout so it is easy to tear and pour the noodles out, right? Nope! The punctures are so shallow that you might as well just be trying to tear the box in half. It doesn't work! Then, I try to open the box at the top, where the cardboard flaps overlap. Yet every time I try to open there, the cardboard tears apart, leaving the lower half of the upper flap still glued to the upper half of the lower one! Whatever glue they use to seal these boxes is stronger than the boxes themselves. </p>
+      </div>
+    </div>
+  </body>
+</html>

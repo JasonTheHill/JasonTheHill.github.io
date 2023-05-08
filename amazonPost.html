@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Post</title>
+    <style>
+      /* applies to all 3 boxes */
+      .box {
+        width: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .rating-box {
+        height: 200px;
+		align-items: center;
+      }
+      .tags-box {
+        height: 580px;
+        overflow-y: scroll;
+		align-items: left;
+      }
+      .review-box {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 10px;
+        overflow-y: scroll;
+		align-items: center;
+      }
+	  
+      /* for getting the boxes in the correct layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+      }
+	  
+      /* the labes: Rating, Tags, Review */
+      .label {
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+	  
+      /* the stars are actually text, using special characters */
+      .stars {
+        font-size: 2.25em;
+        color: gold;
+        margin-top: 10px;
+      }
+	  
+      .tags {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 50;
+      }
+      .list-item {
+        margin-bottom: 5px;
+      }
+      .review {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: justify;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+		<h1>Packaging Reviews</h1>
+		<nav>
+			<a href="index">Home</a> |
+			<a href="search">Search</a> |
+			<a href="createPost">Post New Review</a> |
+			<a href="about">About</a>
+		</nav>
+	</header>
+	
+    <div class="container">
+      <div class="left-container">
+        <div class="box rating-box">
+          <div class="label">Rating</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        </div>
+        <div class="box tags-box">
+          <div class="label">Tags</div>
+          <ul class="tags">
+			<li class="list-item"><a href="Amazon-tag">Amazon</a></li>
+            <li class="list-item"><a href="Plastic-Packaging-tag">Plastic Packaging</a></li>
+            <li class="list-item"><a href="Shipping-tag">Shipping</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box review-box">
+        <div class="label">Thoughtful Amazon Packages!</div>
+        <p class="review">I am writing this review about these lightweight plastic bags that amazon will sometimes package shipments in; if they aren't delicate but ARE lightweight! These packages are tough to puncture, protecting the inside contents from wear and tear during the shipping process. They are also repellant to water with the multiple layers of packaging, in the event that it is raining outside and you forget to grab your delivery for a little while. Best of all (as they state on the packaging itself); using this packaging rather than many variously-sized cardboard containers means less trees being cut down! However, I did have to knock it down a star because, while saving trees is good, substituting easily recyclable cardboard for harder-to-recycle plastic bags may have not been the best alternative.</p>
+      </div>
+    </div>
+  </body>
+</html>

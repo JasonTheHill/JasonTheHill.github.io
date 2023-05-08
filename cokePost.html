@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Post</title>
+    <style>
+      /* applies to all 3 boxes */
+      .box {
+        width: 400px;
+        border: 1px solid black;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      .rating-box {
+        height: 200px;
+		align-items: center;
+      }
+      .tags-box {
+        height: 580px;
+        overflow-y: scroll;
+		align-items: left;
+      }
+      .review-box {
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+        margin: 10px;
+        overflow-y: scroll;
+		align-items: center;
+      }
+	  
+      /* for getting the boxes in the correct layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .left-container {
+        display: flex;
+        flex-direction: column;
+      }
+	  
+      /* the labes: Rating, Tags, Review */
+      .label {
+        font-size: 3em;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+	  
+      /* the stars are actually text, using special characters */
+      .stars {
+        font-size: 2.25em;
+        color: gold;
+        margin-top: 10px;
+      }
+	  
+      .tags {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 50;
+      }
+      .list-item {
+        margin-bottom: 5px;
+      }
+      .review {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: justify;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+		<h1>Packaging Reviews</h1>
+		<nav>
+			<a href="index">Home</a> |
+			<a href="search">Search</a> |
+			<a href="createPost">Post New Review</a> |
+			<a href="about">About</a>
+		</nav>
+	</header>
+	
+    <div class="container">
+      <div class="left-container">
+        <div class="box rating-box">
+          <div class="label">Rating</div>
+          <div class="stars">&#9733;&#9733;&#9734;&#9734;&#9734;</div>
+        </div>
+        <div class="box tags-box">
+          <div class="label">Tags</div>
+          <ul class="tags">
+			<li class="list-item"><a href="Coca-Cola-tag">Coca-Cola</a></li>
+            <li class="list-item"><a href="Cardboard-tag">Cardboard</a></li>
+            <li class="list-item"><a href="Soda-tag">Soda</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box review-box">
+        <div class="label">Thin Cardboard for 24 pack soda boxes?</div>
+        <p class="review">It used to be that once upon a time, soda boxes (especially the larger ones) were made with thick cardboard that was difficult to puncture, tear, and was resistant to being crushed. While this made it a bit annoying to get to the sodas, I never had to worry about the integrity of the box as I carried it to the car and transported it home. These days, the cardboard on those larger soda boxes seems to be MUCH thinner as a method to reduce production costs. The result? If I am not careful when carrying the case of soda by its intended handle, it will rip without warning and drop heavy cans of Coke on my foot and leg. This has happened multiple times! In addition, I have to now check the cases of soda I purchase at the store as the thinner, flimsier cardboard will sometimes fall apart when being shipped.</p>
+      </div>
+    </div>
+  </body>
+</html>
